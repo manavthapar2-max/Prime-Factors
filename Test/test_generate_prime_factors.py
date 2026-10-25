@@ -30,3 +30,7 @@ def test_prime_factors_of_four():
 def test_prime_factors_of_six():
     """Check that 6 has two prime factors."""
     assert generate_prime_factors(6) == [2, 3]
+
+def test_prime_factors_of_eight():
+    """Check that 8 has three prime factors."""
+    assert generate_prime_factors(8) == [2, 2, 2]
