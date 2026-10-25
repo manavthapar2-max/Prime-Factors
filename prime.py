@@ -6,4 +6,10 @@ def generate_prime_factors(number):
     if not isinstance(number, int):
         raise ValueError("Input must be an integer")
 
-    return []
+    factors = []
+
+    while number > 1 and number % 2 == 0:
+        factors.append(2)
+        number //= 2
+
+    return factors
