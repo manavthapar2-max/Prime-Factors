@@ -22,3 +22,7 @@ def test_prime_factors_of_two():
 def test_prime_factors_of_three():
     """Check that 3 has one prime factor."""
     assert generate_prime_factors(3) == [3]
+
+def test_prime_factors_of_four():
+    """Check that 4 has two prime factors."""
+    assert generate_prime_factors(4) == [2, 2]
