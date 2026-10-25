@@ -12,4 +12,7 @@ def generate_prime_factors(number):
         factors.append(2)
         number //= 2
 
+    if number > 1:
+        factors.append(number)
+
     return factors

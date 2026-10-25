@@ -17,4 +17,8 @@ def test_prime_factors_of_one():
 def test_prime_factors_of_two():
     """Check that 2 has one prime factor."""
     assert generate_prime_factors(2) == [2]
-    
+
+
+def test_prime_factors_of_three():
+    """Check that 3 has one prime factor."""
+    assert generate_prime_factors(3) == [3]
