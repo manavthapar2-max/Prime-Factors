@@ -12,7 +12,9 @@ def test_invalid_input():
 
 def test_prime_factors_of_one():
     """Check that 1 has no prime factors."""
-    assert generate_prime_factors(1) == []
+    factors = generate_prime_factors(1)
+    assert isinstance(factors, list)
+    assert not factors
 
 def test_prime_factors_of_two():
     """Check that 2 has one prime factor."""
@@ -34,3 +36,7 @@ def test_prime_factors_of_six():
 def test_prime_factors_of_eight():
     """Check that 8 has three prime factors."""
     assert generate_prime_factors(8) == [2, 2, 2]
+
+def test_prime_factors_of_nine():
+    """Check that 9 has two prime factors."""
+    assert generate_prime_factors(9) == [3, 3]

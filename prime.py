@@ -2,15 +2,19 @@
 
 
 def generate_prime_factors(number):
-    """Return prime factors after validating the input."""
-    if not isinstance(number, int):
+    """Return the prime factors of a positive integer."""
+    if not isinstance(number, int) or isinstance(number, bool):
         raise ValueError("Input must be an integer")
 
     factors = []
+    divisor = 2
 
-    while number > 1 and number % 2 == 0:
-        factors.append(2)
-        number //= 2
+    while divisor * divisor <= number:
+        while number % divisor == 0:
+            factors.append(divisor)
+            number //= divisor
+
+        divisor += 1
 
     if number > 1:
         factors.append(number)
